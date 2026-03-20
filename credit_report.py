@@ -47,7 +47,7 @@ ACTION_COLOR = {
 
 # ─── PAGE TEMPLATE ─────────────────────────────────────────────────────────────
 OUTPUT_PATH = os.path.join(
-    "/Users/phamthanh/Documents/ESSCA | MSc Finance & Data Analyst/Semester 2/16. Credit Risk Project",
+    os.path.dirname(os.path.abspath(__file__)),
     "ThanhPham_CreditRisk_Report.pdf"
 )
 
@@ -397,10 +397,10 @@ def build_report():
         ("<b>Tail risk concentration:</b> One entity — Monte dei Paschi (Bank, Italy) — has "
          "been escalated for immediate committee action. CDS at 306 bp, negative ROE, and a "
          "CCC internal rating signal material credit deterioration requiring position review."),
-        ("<b>Sub-investment-grade dominance:</b> Only 6 of 25 entities score at BBB or above "
-         "under the internal model (Nordea, JPMorgan Chase, ING Group, Intesa Sanpaolo, "
-         "UniCredit, UBS). The remaining 19 carry sub-IG internal ratings — 10 rated B, "
-         "4 rated BB, and 1 CCC."),
+        ("<b>Sub-investment-grade dominance:</b> Only 4 of 25 entities score at BBB or above "
+         "under the internal model (Nordea, JPMorgan Chase, ING Group, Intesa Sanpaolo). "
+         "The remaining 21 carry sub-IG internal ratings — 11 rated B, "
+         "9 rated BB, and 1 CCC."),
         ("<b>Sovereign stress is systemic, not idiosyncratic:</b> Eight of ten sovereigns "
          "are watchlisted. Key constraints include high debt/GDP ratios (Italy 144%, Greece 185%), "
          "weak fiscal balances, and limited FX reserve buffers. Germany remains the sole "

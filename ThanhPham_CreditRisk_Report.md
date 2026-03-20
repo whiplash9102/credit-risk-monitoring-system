@@ -19,30 +19,30 @@
 
 | entity_name | entity_type | internal_score | implied_rating | market_alert_count | watchlist_flag |
 |---|---|---:|---:|---:|---:|
-| **Monte dei Paschi** | **Bank** | **36.84** | **CCC** | **1** | **Yes** |
-| United States | Sovereign | 40.12 | B | 0 | Yes |
-| **Italy** | **Sovereign** | **40.59** | **B** | **0** | **Yes** |
-| **Greece** | **Sovereign** | **42.38** | **B** | **1** | **Yes** |
-| France | Sovereign | 45.38 | B | 0 | Yes |
-| United Kingdom | Sovereign | 46.11 | B | 0 | Yes |
-| **Turkey** | **Sovereign** | **46.92** | **B** | **1** | **Yes** |
-| Societe Generale | Bank | 47.99 | B | 0 | Yes |
-| Spain | Sovereign | 50.17 | B | 0 | Yes |
-| Deutsche Bank | Bank | 51.31 | B | 0 | Yes |
-| Japan | Sovereign | 54.08 | B | 0 | Yes |
-| BNP Paribas | Bank | 54.30 | B | 0 | Yes |
-| Commerzbank | Bank | 55.76 | BB | 1 | Yes |
-| **Brazil** | **Sovereign** | **56.51** | **BB** | **0** | **Yes** |
-| Barclays | Bank | 58.52 | BB | 0 | Yes |
-| HSBC | Bank | 58.99 | BB | 0 | Yes |
-| Santander | Bank | 59.64 | BB | 0 | Yes |
-| ABN AMRO | Bank | 59.99 | BB | 0 | Yes |
+| **Monte dei Paschi** | **Bank** | **36.84** | **CCC** | **4** | **Yes** |
+| United States | Sovereign | 40.12 | B | 1 | Yes |
+| **Italy** | **Sovereign** | **40.59** | **B** | **2** | **Yes** |
+| **Greece** | **Sovereign** | **42.38** | **B** | **2** | **Yes** |
+| France | Sovereign | 45.38 | B | 1 | Yes |
+| United Kingdom | Sovereign | 46.11 | B | 1 | Yes |
+| **Turkey** | **Sovereign** | **46.92** | **B** | **3** | **Yes** |
+| Societe Generale | Bank | 47.99 | B | 1 | Yes |
+| Spain | Sovereign | 50.17 | B | 1 | Yes |
+| Deutsche Bank | Bank | 51.31 | B | 1 | Yes |
+| Japan | Sovereign | 54.08 | B | 1 | Yes |
+| BNP Paribas | Bank | 54.30 | B | 1 | Yes |
+| Commerzbank | Bank | 55.76 | BB | 2 | Yes |
+| **Brazil** | **Sovereign** | **56.51** | **BB** | **2** | **Yes** |
+| Barclays | Bank | 58.52 | BB | 1 | Yes |
+| HSBC | Bank | 58.99 | BB | 2 | Yes |
+| Santander | Bank | 59.64 | BB | 1 | Yes |
+| ABN AMRO | Bank | 59.99 | BB | 1 | Yes |
 | Germany | Sovereign | 61.27 | BB | 0 | No |
 | UniCredit | Bank | 63.16 | BB | 0 | No |
 | UBS | Bank | 64.29 | BB | 0 | No |
 | ING Group | Bank | 65.31 | BBB | 0 | No |
 | Intesa Sanpaolo | Bank | 68.12 | BBB | 0 | No |
-| JPMorgan Chase | Bank | 70.99 | BBB | 0 | No |
+| JPMorgan Chase | Bank | 70.99 | BBB | 1 | No |
 | Nordea | Bank | 76.19 | A | 0 | No |
 
 ## 3. Watchlist Section
@@ -50,10 +50,10 @@
 | Name | Reason for inclusion | Latest CDS / spread / equity signal | Recommendation |
 |---|---|---|---|
 | Monte dei Paschi | Weakest bank score; high NPLs, negative earnings, and non-investment-grade profile. | CDS 306bp, spread 342bp, equity 5d +0.6% | Escalate |
-| Turkey | Inflation shock and external imbalance keep sovereign risk elevated. | CDS 473bp, spread 402bp, equity 5d +1.5% | Review |
+| Turkey | Inflation shock and external imbalance keep sovereign risk elevated. | CDS 473bp, spread 402bp, equity 5d -1.8% | Review |
 | Brazil | Weak fiscal balance and non-investment-grade profile; market spreads remain wide. | CDS 281bp, spread 293bp, equity 5d -3.2% | Review |
-| Greece | High debt burden and latest spread widening keep refinancing risk live. | CDS 271bp, spread 235bp, equity 5d +1.6% | Review |
-| Italy | High debt stock and weak internal score leave limited headroom. | CDS 148bp, spread 126bp, equity 5d -5.3% | Review |
+| Greece | High debt burden and latest spread widening keep refinancing risk live. | CDS 272bp, spread 283bp, equity 5d -2.1% | Review |
+| Italy | High debt stock and weak internal score leave limited headroom. | CDS 148bp, spread 158bp, equity 5d -5.3% | Review |
 | Societe Generale | Weak profitability, efficiency, and liquidity metrics. | CDS 129bp, spread 95bp, equity 5d -1.2% | Review |
 | Deutsche Bank | Cost efficiency and leverage remain the key constraints. | CDS 123bp, spread 99bp, equity 5d -1.9% | Review |
 | Commerzbank | Weak efficiency and an active volatility alert warrant closer monitoring. | CDS 112bp, spread 101bp, equity 5d +0.1% | Review |
@@ -107,7 +107,7 @@ Turkey remains the highest-risk sovereign in the perimeter on a market-implied b
 **Strengths**
 
 - **Debt/GDP of 31%** is low relative to the broader sovereign sample and provides some balance-sheet flexibility.
-- **GDP growth of 2.9%** and **FX reserves of 4.2 months of imports** offer a limited near-term cushion.
+- **GDP growth of 4.2%** — above the EM peer average — and **FX reserves of 4.2 months of imports** offer a limited near-term cushion.
 
 **Weaknesses**
 
@@ -119,7 +119,7 @@ Turkey remains the highest-risk sovereign in the perimeter on a market-implied b
 
 - CDS 5Y: **473bp**
 - Bond spread: **402bp**
-- Equity: **+1.5% over 5 days**
+- Equity: **-1.8% over 5 days**
 - 30-day equity volatility: **53.5%**
 
 **Internal Rating + Outlook**  
