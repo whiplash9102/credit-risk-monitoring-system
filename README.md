@@ -14,8 +14,8 @@ It covers **25 financial counterparties** (banks and sovereigns) and produces tw
 
 | Output | Purpose | File |
 |--------|---------|------|
-| **Live monitor** | Interactive scoring dashboard — day-to-day use | `credit_monitor.ipynb` |
-| **Committee report** | Formatted PDF for risk committee presentation | `ThanhPham_CreditRisk_Report.pdf` |
+| **Live monitor** | Interactive scoring dashboard — day-to-day use | `notebooks/credit_monitor.ipynb` |
+| **Committee report** | Formatted PDF for risk committee presentation | `reports/ThanhPham_CreditRisk_Report.pdf` |
 
 The two outputs share the same **data and business logic** but are completely independent in implementation.
 
@@ -25,17 +25,23 @@ The two outputs share the same **data and business logic** but are completely in
 
 ```
 .
-├── credit_monitor.ipynb          ← Main monitoring notebook (start here)
-├── credit_report.py              ← PDF generator (ReportLab)
-├── credit_report.ipynb           ← Notebook version of the PDF generator
-├── credit_report_v1.py           ← Earlier PDF version (matplotlib-based)
-├── ThanhPham_CreditRisk_Report.pdf
-├── ThanhPham_CreditRisk_Report.md
-│
-└── data/                         ← Raw input data (edit to refresh the monitor)
-    ├── banks_sample.csv          ← 15 banks × 7 financial ratios
-    ├── sovereigns_sample.csv     ← 10 sovereigns × 7 macro indicators
-    └── market_data_sample.csv    ← Daily CDS, spread, vol per entity (~1,650 rows)
+├── README.md
+├── data/                         ← Raw input data (edit to refresh the monitor)
+│   ├── banks_sample.csv          ← 15 banks × 7 financial ratios
+│   ├── sovereigns_sample.csv     ← 10 sovereigns × 7 macro indicators
+│   └── market_data_sample.csv    ← Daily CDS, spread, vol per entity (~1,650 rows)
+├── notebooks/
+│   ├── credit_monitor.ipynb      ← Main monitoring notebook (start here)
+│   ├── credit_report.ipynb       ← Notebook version of the PDF generator
+│   └── credit_risk_monitoring.ipynb
+├── outputs/                      ← Generated monitoring tables and charts
+├── reports/
+│   ├── ThanhPham_CreditRisk_Report.pdf
+│   └── ThanhPham_CreditRisk_Report.md
+├── src/
+│   └── credit_report.py          ← PDF generator (ReportLab)
+└── archive/
+    └── credit_report_v1.py       ← Earlier PDF version (matplotlib-based)
 ```
 
 ---
@@ -54,7 +60,7 @@ pip install pandas matplotlib seaborn numpy scipy plotly ipywidgets
 ### 2. Open the monitoring notebook
 
 ```bash
-jupyter lab credit_monitor.ipynb
+jupyter lab notebooks/credit_monitor.ipynb
 ```
 
 Run all cells top-to-bottom. The notebook will:
@@ -66,10 +72,10 @@ Run all cells top-to-bottom. The notebook will:
 ### 3. Regenerate the PDF report (optional)
 
 ```bash
-conda run -n final_project python credit_report.py
+conda run -n final_project python src/credit_report.py
 ```
 
-Output: `ThanhPham_CreditRisk_Report.pdf`
+Output: `reports/ThanhPham_CreditRisk_Report.pdf`
 
 ---
 
@@ -140,7 +146,7 @@ Each factor is **min-max normalised** across the peer group to a 0–100 scale, 
 ## How to update for a new monitoring period
 
 1. **Edit the CSV files** in `data/` with updated factor values and market data
-2. **Change `REF_DATE`** in Section 1 of `credit_monitor.ipynb`
+2. **Change `REF_DATE`** in Section 1 of `notebooks/credit_monitor.ipynb`
 3. **Run all cells** — scores, ratings, watchlist, and all charts regenerate automatically
 
 To add or remove an entity, add or delete a row in the relevant CSV file. No code changes needed.

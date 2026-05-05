@@ -9,12 +9,13 @@ from matplotlib.backends.backend_pdf import PdfPages
 from matplotlib.patches import FancyBboxPatch
 
 
-ROOT = Path(__file__).resolve().parent
-OUTPUT_MD = ROOT / "ThanhPham_CreditRisk_Report.md"
-OUTPUT_PDF = ROOT / "ThanhPham_CreditRisk_Report.pdf"
-PROJECT_DIR = ROOT / "credit_risk_project"
-OUTPUTS_DIR = PROJECT_DIR / "outputs"
-DATA_DIR = PROJECT_DIR / "data"
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+REPORTS_DIR = PROJECT_ROOT / "reports"
+REPORTS_DIR.mkdir(exist_ok=True)
+OUTPUT_MD = REPORTS_DIR / "ThanhPham_CreditRisk_Report.md"
+OUTPUT_PDF = REPORTS_DIR / "ThanhPham_CreditRisk_Report.pdf"
+OUTPUTS_DIR = PROJECT_ROOT / "outputs"
+DATA_DIR = PROJECT_ROOT / "data"
 
 NAVY = "#17324D"
 SLATE = "#5B6B7A"

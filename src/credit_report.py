@@ -17,7 +17,7 @@ from reportlab.platypus import (
 from reportlab.platypus.flowables import Flowable
 from reportlab.pdfgen import canvas
 from reportlab.lib.colors import HexColor
-import os
+from pathlib import Path
 
 # ─── COLOUR PALETTE ────────────────────────────────────────────────────────────
 NAVY        = HexColor("#0B1F3A")   # primary dark
@@ -46,10 +46,10 @@ ACTION_COLOR = {
 }
 
 # ─── PAGE TEMPLATE ─────────────────────────────────────────────────────────────
-OUTPUT_PATH = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)),
-    "ThanhPham_CreditRisk_Report.pdf"
-)
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+REPORTS_DIR = PROJECT_ROOT / "reports"
+REPORTS_DIR.mkdir(exist_ok=True)
+OUTPUT_PATH = str(REPORTS_DIR / "ThanhPham_CreditRisk_Report.pdf")
 
 W, H = A4
 MARGIN_L = 2.0 * cm
